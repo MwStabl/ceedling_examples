@@ -22,3 +22,15 @@ void test_topModule_should_returnFalse_ifNumberLess5(void)
   
   TEST_ASSERT_FALSE(decide(number_below_threshold));
 }
+
+void test_topModule_should_returnTrue_ifNumberMuchGreater5(void)
+{
+  uint8_t number_above_threshold = 257;
+  TEST_ASSERT_TRUE(decide(number_above_threshold));
+}
+ 
+void test_topModule_should_returnTrue_ifNumberMuchMuchGreater5(void)
+{
+  uint8_t number_above_threshold = -250;
+  TEST_ASSERT_TRUE(decide(number_above_threshold));
+}
